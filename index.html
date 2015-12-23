@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>{@pageName}</title>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width,height=device-height,target-densitydpi=high-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+        <link href="styles/style.css" type="text/css" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/jquery-ui.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 id="title-h">@隐藏的优化信息</h1>   <!-- 隐藏的优化信息 -->
+                <form class="navbar" action="index.php">
+                    <ul id="nav-items"><!-- 全站内容分类导航 -->
+                        <li class="nav-item" name="home" value="{@catId}">主页</li>
+                        <li class="nav-item" name="baseData" value="{@catId}">基本数据</li>
+                        <li class="nav-item" name="catId" value="{@catId}">其他</li>
+                    </ul>
+                </form>
+            </nav>
+        </header>
+        <div id="leftBar">
+
+        </div>
+        <div id="rightBar">
+
+        </div>
+    </body>
+    <div id="saleBar">
+        <input type="text" title="扫描商品条码/输入商品名称或关键字" name="barCode" id="barCode">
+
+        <section class="confirm" style="display:none">
+            <hr/>
+            <p>您输入的商品不存在,是否添加该商品?</p>
+            <p>
+                <botton class="confirm-btn" name="confirm" value="1">添加商品</botton>
+                <botton class="confirm-btn" name="confirm" value="0">暂不添加</botton>
+            </p>
+        </section>
+        <div class="content">
+
+        </div>
+    </div>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/web.js"></script>
+
+</html>

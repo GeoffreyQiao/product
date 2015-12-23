@@ -1,0 +1,8 @@
+{
+	"host"  : "localhost",
+	"user"  : "root",
+	"pswd"  : "123",
+	"dbname": "product",
+    "port"  : "3306",
+	"char"  : "UTF8"
+}
