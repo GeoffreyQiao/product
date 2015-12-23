@@ -1,7 +1,7 @@
 <?php
 
 class addProducts_Mod extends Model{
-	protect $table = 'products';
+	public $table = 'products';
 
 	public function add($data){
 		$sql = $this->get_insert_db_sql($this->table, $data);
@@ -17,5 +17,10 @@ class addProducts_Mod extends Model{
 			$sql = 'SELECT * FROM '.$this->table.' WHERE Id = '.$id;
 			return $this->query($sql);
 		}
+	}
+
+	public function find($code){
+		$sql = "SELECT * FROM $this->table WHERE barCode = $code";
+		return $rs = $this->query($sql);
 	}
 }

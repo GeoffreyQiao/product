@@ -1,20 +1,26 @@
 <form id="addProduct">
 	<p class="row">
-		<input type="text" class="ap-items" name="pBrand" title="商品品牌">
-		<input type="text" class="ap-items" name="pName" title="商品名称(不含品牌)">
+		商品品牌:<input type="text" class="ap-items" name="pBrand" title="商品品牌">
+		商品名称:<input type="text" class="ap-items" name="pName" title="商品名称(不含品牌)">
 	</p>
 	<p class="row">
-		<input type="text" class="ap-items" name="barCode" title="商品13位条形码">
-		<input type="text" class="ap-items" name="pSpec" title="商品规格(例如:条、包、瓶...)">
+		商品条码:<input type="text" class="ap-items" name="barCode" title="商品13位条形码">
+		商品规格:<input type="text" class="ap-items" name="pSpec" title="商品规格(例如:条、包、瓶...)">
 	</p>
 	<p class="row">
-		<input type="text" class="ap-items" name="pNum" title="商品数量">
-		<input type="text" class="ap-items" name="pPrice" title="商品售价">
+		商品数量:<input type="text" class="ap-items" name="pNum" title="商品数量">
+		商品售价:<input type="text" class="ap-items" name="pPrice" title="商品售价">
 	</p>
-	<div>
-	<span>商品是否上架</span>
-	是:<input type="radio" class="ap-items" name="isSale" title="此商品直接上架" value="1">
-	<span>&nbsp;&nbsp;&nbsp;</span>
-	否:<input type="radio" class="ap-items" name="isSale" title="此商品暂不上架" value="0">
-	</div>
+	<p class="row">
+		是否上架
+		<i>
+			是:<input type="radio" class="ap-items" name="isSale" title="此商品直接上架" value="1">
+			<span>&nbsp;&nbsp;&nbsp;</span>
+			否:<input type="radio" class="ap-items" name="isSale" title="此商品暂不上架" value="0">
+		</i>
+		<i>
+			<button class="add-btn" name="add" value="1">添加</button>
+			<button class="add-btn" name="add" value="0">放弃</button>
+		</i>
+	</p>
 </form>

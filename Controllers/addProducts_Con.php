@@ -6,7 +6,7 @@ class addProducts_Con{
 		include ROOT . 'tpls'. DS . 'addProducts.html';
 	}
 	public function addProducts($col = 'barCode', $v){
-		$db = new addProducts_Mod();
+		$db = new Products_Mod();
 		if ($res = $db->add($dataList)) {
 			print_r($res);
 		}

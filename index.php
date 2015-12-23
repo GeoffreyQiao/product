@@ -3,14 +3,21 @@
 require 'init.inc.php';
 $db = new index_Mod();
 $constr = null;
+print_r($_GET);
 if (!empty($_GET)) {
-	foreach ($_GET as $k => $v) {
-		$constr = $_GET[$k];
+	if (array_key_exists('Con', $_GET)) {
+		try {
+			$constr =$_GET['Con'].'_Con';
+		} catch (Exception $e) {
+			return false;
+		}
 	}
-	$constr .= '_Con';
-	try {
-		$con = @new $constr();
-	} catch (Exception $e) {
-		return false;
+	if (array_key_exists('Code', $_GET)) {
+		try {
+			$rs = new $constr($_GET['Code']);
+		} catch (Exception $e) {
+			return false;
+		}
+		return $rs;
 	}
 }

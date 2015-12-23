@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
 		height: '5vh',
 		'background-color':'black'
 		});
-	$('.confirm .confirm-btn').button();
+	$('.confirm .confirm-btn,#addproduct .add-btn').button();
 	$('.nav-item').click(function(e) {
 		var page = {
 			home:'index.html',
@@ -64,7 +64,10 @@ jQuery(document).ready(function() {
 
 		$.ajax({
 			url: 'index.php',
-			data: {Con: 'addProducts'},
+			data: {
+				Con: 'FindProducts',
+				Code: e.currentTarget.value
+		},
 			success:function(r,s,x) {
 				e = $('#saleBar');
 				if (r == false) {
@@ -73,7 +76,22 @@ jQuery(document).ready(function() {
 					e.children('.content').html(r);
 				};
 			}
+		});
+		$('#saleBar').delegate(".confirm-btn","click",function(event) {
+			if (event.currentTarget.id=="confirm-btn-1") {
+				$('.confirm').hide();
+				$.ajax({
+					url: 'index.php',
+					data: {Con: 'AddProducts'},
+					success: function(r,s,x){
+						$('#saleBar>.content').html(r).find('button').button();
+						}
+					});
+			} else {
+				$('.confirm').hide();
+			}
 		})
-
 	})
+
+
 });
