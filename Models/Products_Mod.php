@@ -1,6 +1,6 @@
 <?php
 
-class addProducts_Mod extends Model{
+class Products_Mod extends Model{
 	public $table = 'products';
 
 	public function add($data){
@@ -13,14 +13,14 @@ class addProducts_Mod extends Model{
 			echo '<h3 style="color:red">商品添加失败！</h3>';
 			return false;
 		}
-		protect function findInsert($id){
-			$sql = 'SELECT * FROM '.$this->table.' WHERE Id = '.$id;
-			return $this->query($sql);
-		}
+	}
+	protected function findInsert($id){
+		$sql = 'SELECT * FROM '.$this->table.' WHERE Id = '.$id;
+		return $this->query($sql);
 	}
 
 	public function find($code){
 		$sql = "SELECT * FROM $this->table WHERE barCode = $code";
-		return $rs = $this->query($sql);
+		return $rs = $this->get_row($sql);
 	}
 }

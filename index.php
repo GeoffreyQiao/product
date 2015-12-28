@@ -1,20 +1,21 @@
 <?php
 
 require 'init.inc.php';
-$db = new index_Mod();
 $constr = null;
-print_r($_GET);
 if (!empty($_GET)) {
-	if (array_key_exists('Con', $_GET)) {
+	if (isset($_GET['Con']) && !empty($_GET['Con'])){
+		$constr = $_GET['Con'].'_Con';
+	}
+	if (isset($_GET['Code']) && !empty($_GET['Code'])) {
 		try {
-			$constr =$_GET['Con'].'_Con';
+			$rs = new $constr($_GET['Code']);
 		} catch (Exception $e) {
 			return false;
 		}
-	}
-	if (array_key_exists('Code', $_GET)) {
+		// return $rs;
+	}else {
 		try {
-			$rs = new $constr($_GET['Code']);
+			$rs = new $constr();
 		} catch (Exception $e) {
 			return false;
 		}

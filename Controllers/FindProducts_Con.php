@@ -1,14 +1,21 @@
 <?php
 
 class FindProducts_Con{
-	public function __construct($barCode){
-		if (strlen($barCode)==13) {
-			$this->findCode($barCode);
+	protected $barCode = null;
+	public $productInfo = array();
+
+	public function __construct($code){
+
+		$this->barCode = $code;
+		if (strlen($this->barCode)==13) {
+			$this->findCode();
 		}
+		include ROOT . 'tpls'. DS . 'AddProducts.html';
 	}
 
-	public function findCode($code){
+	protected function findCode(){
 		$db = new Products_Mod();
-		return $db->find($code);
+		$this->productInfo = $db->find($this->barCode);
+		// $rs = json_encode($rs);
 	}
 }

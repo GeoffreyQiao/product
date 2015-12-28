@@ -3,18 +3,18 @@ jQuery(document).ready(function() {
 		display:'none'
 	});
 	$('body').css({
-		'background-color': '#4a4a4a',
+		backgroundColor: '#4a4a4a',
 		color: '#f02222',
 		margin:'0'
 	});
 	$('.nav-item').css({
 		display: 'inline-block',
 		width: '7rem',
-		'line-height':'5vh',
+		lineHeight:'5vh',
 		height: '100%',
 	}).parent().css({
 		height: '5vh',
-		'background-color':'black'
+		backgroundColor:'black'
 		});
 	$('.confirm .confirm-btn,#addproduct .add-btn').button();
 	$('.nav-item').click(function(e) {
@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 		modal:true,
 		resize:false,
 		width:'50vw',
-		'min-height':500,
+		minHeight:500,
 		title:'前台'
 	});
 
@@ -53,30 +53,22 @@ jQuery(document).ready(function() {
 			my:'left+10 center'
 		}
 	}).on('focusout','#barCode[title]',function(e) {
-		// $(this).parent().children('.content').load("index.php",'Con=addProducts',function(r,s,x){
-		// 	if (s =="success" ) {
-		// 		alert(r.size());
-
-		// 		return $('#saleBar .confirm').show();
-		// 	};
-		// });
-		// $('.content form [title]').tooltip();
-
 		$.ajax({
 			url: 'index.php',
 			data: {
 				Con: 'FindProducts',
-				Code: e.currentTarget.value
-		},
+				Code: $(this).val()
+			},
 			success:function(r,s,x) {
-				e = $('#saleBar');
+				g = $('#saleBar');
 				if (r == false) {
-					e.children('.confirm').show();
+					g.children('.confirm').show();
 				}else{
-					e.children('.content').html(r);
+					g.children('.content').html(r).find('button').button();
 				};
 			}
 		});
+
 		$('#saleBar').delegate(".confirm-btn","click",function(event) {
 			if (event.currentTarget.id=="confirm-btn-1") {
 				$('.confirm').hide();

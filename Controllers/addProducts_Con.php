@@ -3,12 +3,11 @@
 class addProducts_Con{
 	protected $dataList = array();
 	public function __construct(){
-		include ROOT . 'tpls'. DS . 'addProducts.html';
+		include ROOT . 'tpls'. DS . 'AddProducts.html';
 	}
 	public function addProducts($col = 'barCode', $v){
 		$db = new Products_Mod();
 		if ($res = $db->add($dataList)) {
-			print_r($res);
 		}
 	}
 

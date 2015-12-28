@@ -1,15 +1,15 @@
 <form id="addProduct">
 	<p class="row">
-		商品品牌:<input type="text" class="ap-items" name="pBrand" title="商品品牌">
-		商品名称:<input type="text" class="ap-items" name="pName" title="商品名称(不含品牌)">
+		商品品牌:<input type="text" class="ap-items" name="pBrand" title="商品品牌" value="<?php echo $this->productInfo['pBrand']; ?>">
+		商品名称:<input type="text" class="ap-items" name="pName" title="商品名称(不含品牌)" value="<?php echo $this->productInfo['pName']; ?>">
 	</p>
 	<p class="row">
-		商品条码:<input type="text" class="ap-items" name="barCode" title="商品13位条形码">
-		商品规格:<input type="text" class="ap-items" name="pSpec" title="商品规格(例如:条、包、瓶...)">
+		商品条码:<input type="text" class="ap-items" name="barCode" title="商品13位条形码" value="<?php echo $this->productInfo['barCode']; ?>">
+		商品规格:<input type="text" class="ap-items" name="pSpec" title="商品规格(例如:条、包、瓶...)" value="<?php echo $this->productInfo['pSpec']; ?>">
 	</p>
 	<p class="row">
-		商品数量:<input type="text" class="ap-items" name="pNum" title="商品数量">
-		商品售价:<input type="text" class="ap-items" name="pPrice" title="商品售价">
+		商品数量:<input type="text" class="ap-items" name="pNum" title="商品数量" value="<?php echo $this->productInfo['pNum']; ?>">
+		商品售价:<input type="text" class="ap-items" name="pPrice" title="商品售价" value="<?php echo $this->productInfo['pPrice']; ?>">
 	</p>
 	<p class="row">
 		是否上架
