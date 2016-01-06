@@ -10,6 +10,9 @@ class FindProducts_Con{
 		if (strlen($this->barCode)==13) {
 			$this->findCode();
 		}
+		if (empty($this->productInfo['Id'])) {
+			return false;
+		}
 		include ROOT . 'tpls'. DS . 'AddProducts.html';
 	}
 

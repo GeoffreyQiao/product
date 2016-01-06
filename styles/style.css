@@ -76,3 +76,47 @@
 #addProduct .ap-items{
 	border-radius: 0.3rem;
 }
+
+.nav-item{
+	position: relative;
+	text-align: center;
+}
+
+.nav-item ul{
+	display: none;
+	list-style: none;
+}
+
+.nav-item:hover ul{
+	display: block;
+	position: absolute;
+	top: 5vh;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-item:hover li{
+	padding: 0;
+	margin: 0;
+	display: block;
+	width: 7rem;
+	text-align: center;
+	border-top: 0.2rem solid #4a4a4a;
+	background-color: black;
+}
+#contants{
+	width: 100%;
+}
+#leftBar{
+	width: 20%;
+	overflow: hidden;
+}
+#rightBar{
+	width: 80%;
+}
+#leftBar,#rightBar{
+	height: 100%;
+	display: block;
+	float: left;
+}

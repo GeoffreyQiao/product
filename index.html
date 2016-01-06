@@ -13,21 +13,25 @@
         <header>
             <nav>
                 <h1 id="title-h">@隐藏的优化信息</h1>   <!-- 隐藏的优化信息 -->
-                <form class="navbar" action="index.php">
+                <form class="navbar">
                     <ul id="nav-items"><!-- 全站内容分类导航 -->
-                        <li class="nav-item" name="home" value="{@catId}">主页</li>
-                        <li class="nav-item" name="baseData" value="{@catId}">基本数据</li>
-                        <li class="nav-item" name="catId" value="{@catId}">其他</li>
+                        <li class="nav-item" id="home">主页</li>
+                        <li class="nav-item" id="baseData"><span>基本数据</span>
+                            <ul>
+                                <li class="baseData" id="pManage">商品管理</li>
+                                <li class="baseData" id="cManage">客户管理</li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item" id="catId">其他</li>
                     </ul>
                 </form>
             </nav>
         </header>
-        <div id="leftBar">
+        <div id="contants">
 
         </div>
-        <div id="rightBar">
 
-        </div>
     </body>
     <div id="saleBar">
         <input type="text" title="扫描商品条码/输入商品名称或关键字" name="barCode" id="barCode">

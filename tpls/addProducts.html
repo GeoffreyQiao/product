@@ -1,26 +1,32 @@
-<form id="addProduct">
-	<p class="row">
-		商品品牌:<input type="text" class="ap-items" name="pBrand" title="商品品牌" value="<?php echo $this->productInfo['pBrand']; ?>">
-		商品名称:<input type="text" class="ap-items" name="pName" title="商品名称(不含品牌)" value="<?php echo $this->productInfo['pName']; ?>">
-	</p>
-	<p class="row">
-		商品条码:<input type="text" class="ap-items" name="barCode" title="商品13位条形码" value="<?php echo $this->productInfo['barCode']; ?>">
-		商品规格:<input type="text" class="ap-items" name="pSpec" title="商品规格(例如:条、包、瓶...)" value="<?php echo $this->productInfo['pSpec']; ?>">
-	</p>
-	<p class="row">
-		商品数量:<input type="text" class="ap-items" name="pNum" title="商品数量" value="<?php echo $this->productInfo['pNum']; ?>">
-		商品售价:<input type="text" class="ap-items" name="pPrice" title="商品售价" value="<?php echo $this->productInfo['pPrice']; ?>">
-	</p>
-	<p class="row">
-		是否上架
-		<i>
-			是:<input type="radio" class="ap-items" name="isSale" title="此商品直接上架" value="1">
-			<span>&nbsp;&nbsp;&nbsp;</span>
-			否:<input type="radio" class="ap-items" name="isSale" title="此商品暂不上架" value="0">
-		</i>
-		<i>
-			<button class="add-btn" name="add" value="1">添加</button>
-			<button class="add-btn" name="add" value="0">放弃</button>
-		</i>
-	</p>
-</form>
+<div id="leftBar">
+	sdfs
+</div>
+<div id="rightBar">
+	<form id="addProduct">
+		<p class="row">
+			商品品牌:<input type="text" class="ap-items" name="pBrand" title="商品品牌" value="pBrand++">
+			商品名称:<input type="text" class="ap-items" name="pName" title="商品名称(不含品牌)" value="pName++">
+		</p>
+		<p class="row">
+			商品条码:<input type="text" class="ap-items" name="barCode" title="商品13位条形码" value="barCode++">
+			商品规格:<input type="text" class="ap-items" name="pSpec" title="商品规格(例如:条、包、瓶...)" value="pSpec++">
+		</p>
+		<p class="row">
+			商品数量:<input type="text" class="ap-items" name="pNum" title="商品数量" value="pNum++">
+			商品售价:<input type="text" class="ap-items" name="pPrice" title="商品售价" value="pPrice++">
+		</p>
+		<p class="row">
+			是否上架
+			<i>
+				是:<input type="radio" class="ap-items" name="isSale" title="此商品直接上架" value="true" checked>
+				<span>&nbsp;&nbsp;&nbsp;</span>
+				否:<input type="radio" class="ap-items" name="isSale" title="此商品暂不上架" value="false">
+			</i>
+			<i>
+				<button class="add-btn" name="add" value="true">添加</button>
+				<button class="add-btn" name="add" value="false">放弃</button>
+			</i>
+		</p>
+	</form>
+	<p id="btn">gg</p>
+</div>
